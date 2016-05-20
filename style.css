@@ -97,3 +97,9 @@ td {
   border-bottom: 2px;
   border-radius: 15px;
 }
+#banner {
+  background-color: black !important;
+  align-self: center;
+  /*background-image: url('http://warofthemovies.com/wp-content/uploads/2015/03/Star-Wars-banner.jpg');
+  background-repeat: no-repeat;*/
+}

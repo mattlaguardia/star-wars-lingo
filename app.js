@@ -13,7 +13,7 @@ var split;
 var people;
 var characters = 'http://swapi.co/api/people/' + randNum(); + '/' ;
 var films;
-
+// ONLOAD RELEASE THE FORCE //
 window.onload = function(){
   startGame();
   submitListener();
@@ -25,7 +25,6 @@ function startGame(){
       people = data.name;
       console.log(people);
       films = data.films;
-      console.log(films);
       gender = data.gender;
       hairColor = data.hair_color;
       skinColor = data.skin_color;
@@ -35,6 +34,7 @@ function startGame(){
       document.getElementById("userText").focus();
     })
     .fail(function(){
+      $("#messages").setMessage("Click New Character!");
       console.log("No Data");
     });
 }
@@ -43,6 +43,7 @@ function shake () {
     $(this).removeClass("animated shake");
   });
 }
+// CHECK FOR WINNER FUNCTION //
 function checkWinner () {
   if(character === userLower){
     setMessage("CONGRATS YOU GUESSED CORRECT!!!");
@@ -77,7 +78,6 @@ function characterSelector (){
 function addCell(letter,i){
   var row = document.querySelectorAll("tr");
   var newCell = document.createElement("td");
-  // newCell.setAttribute("id", "pos" + i);
   newCell.textContent = letter;
   row[0].appendChild(newCell);
   if (letter === "é" || letter === "-") {
@@ -110,7 +110,6 @@ function userSubmit(){
   console.log(userSplit);
   compareAnswer();
   checkWinner();
-  // onclick user submits their guess
 }
 // FUNCTION THAT COMPARES USER ARRAY AND SPLIT ARRAY //
 function compareAnswer(){
@@ -173,6 +172,7 @@ function scoreBoard (){
       localStorage.setItem("highscore", score);
   }
 }
+// HINT MESSAGE FUNCTION //
 function hintButtonClicked(){
   setMessage("Character features - gender: " + gender + " - hair-color: " + hairColor + " - skin-color: " + skinColor + " - starred in: " + films);
 }
@@ -190,6 +190,8 @@ function countdown() {
       temp = document.getElementById('countdown');
       temp.innerHTML = "TIME IS UP!";
       shake();
+      $("td").addClass("correct");
+      setMessage("You didn't guess in time! GAME OVER!")
       return;
     }
     seconds--;
