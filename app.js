@@ -72,7 +72,6 @@ function characterSelector (){
   split = people.toUpperCase().split('');
   character = people.toUpperCase();
   console.log(split);
-  console.log(people);
 }
 // ADDING TABLE CELLS TO BOARD //
 function addCell(letter,i){
@@ -81,9 +80,13 @@ function addCell(letter,i){
   // newCell.setAttribute("id", "pos" + i);
   newCell.textContent = letter;
   row[0].appendChild(newCell);
-  if (letter === "é" || letter === " " || letter === "-") {
+  if (letter === "é" || letter === "-") {
+    newCell.setAttribute("class", "correct");
+  }
+  if (letter === " ") {
     newCell.setAttribute("id", "space");
-  } else {
+  }
+  else {
     newCell.setAttribute("id", "pos" + i);
     shake();
     //setMessage("You Guessed a Correct Letter!");
@@ -177,8 +180,11 @@ function hintButtonClicked(){
 function countdown() {
     seconds = document.getElementById('countdown').innerHTML;
     seconds = parseInt(seconds, 10);
-    if (seconds == 45) {
+    if (seconds == 20) {
       document.getElementById('pos1').className = "correct";
+    }
+    if (seconds == 8) {
+      document.getElementById('pos2').className = "correct";
     }
     if (seconds == 1) {
       temp = document.getElementById('countdown');
