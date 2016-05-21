@@ -9,7 +9,7 @@ Let me introduce the game!
 
 ## Technologies used
 
-**Star Wars Trivia** is a game that I created using the Star Wars API. Based on characters seen in the 7 movies. You can check out the game  [here](http://daringfireball.net/projects/markdown/syntax).
+**Star Wars Trivia** is a game that I created using the Star Wars API. Based on characters seen in the 7 movies. You can check out the game  [here](http://scheduler-deborah-26034.bitballoon.com/).
 
 **Technologies**
 
@@ -59,4 +59,3 @@ For WireFrames - I used a pen and some paper to make my frame.
 - Jen for letting me bounce ideas around and helping me talk about what I needed to create
 - Ben for being a troll
 - Kabah for working together on some functions
- 
