@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Star Wars Trivia!</title>
+<!-- Custom CSS -->
+  <link rel="stylesheet" href="animate.css/animate.min.css">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="http://imgs.tuts.dragoart.com/how-to-draw-the-rebel-alliance-starbird-from-star-wars-starbird-symbol_1_000000015781_5.gif">
+<!-- VENDORS -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--JQUERY -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<!-- JS FILE -->
+  <script type="text/javascript" src="app.js" ></script>
+</head>
+<!-- BODY OF STARWARS LINGO BROWSER GAME -->
+<body>
+<!-- HEADER -->
+<div class="jumbotron text-center" id="banner">
+  <div>
+    <h1 id="starWarsTitle"> Star Wars Trivia </h1>
+  </div>
+</div>
+<!-- INSTRUCTIONS -->
+<div class="container jumbotron" id="instructions">
+  <p>Welcome to my Star Wars Character Trivia Game!</p>
+  <p>The game is pretty simple, you will just want to guess what character you think the board is hiding from you. You are timed so try to beat the clock! The empty black box means there is a space in the character's name, and to help you out I have provided you with the first letter and hint button if you need help (I may have also set some triggers to show you some letters if you need some extra help).</p>
+  <p>Character can be from any of the seven movies! Good Luck!</p>
+  <p>May the Force Be With You!</p>
+</div>
+<div class="container jumbotron">
+  <button class="btn" id="startButton" onclick="startButton();">Start Game</button>
+</div>
+
+
+<div id="gameBoard">
+  <!-- TIMER -->
+  <h2>Timer</h2>
+  <div id="countdown">30</div>
+
+  <!-- MESSAGES -->
+  <div class="container jumbotron">
+    <h3 class="messages" id="messages">Star Wars Character Trivia!</h3>
+  </div>
+  <div id="word">
+    <table align="center" class="table-responsive">
+      <tr align="center" class="center-block">
+      <!-- APPENDING CHARACTER HERE -->
+      </tr>
+    </table>
+  </div>
+
+  <!-- USER INPUT -->
+  <div class="container jumbotron" id="userInputDiv">
+    <input class="form-control" placeholder="Luke Skywalker??" id="userText"></input>
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="submit" onclick="userSubmit();">Submit</button>
+    <button type="button" class="btn btn-warning btn-lg btn-block" id="reset" onclick="reset();"> New Character </button>
+    <button type="button" class="btn btn-default btn-lg btn-block" id="hint" onclick="hintMessage();">Hint</button>
+    <p id="note">**p.s. sometimes you need to click hint twice</p>
+  </div>
+  <div class="container col-md-4"></div>
+</div>
+<!-- BOARD LAYOUT -->
+
+</body>
+</html>
